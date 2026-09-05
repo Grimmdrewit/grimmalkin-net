@@ -1,0 +1,64 @@
+/* assets/css/07-sidebar.css
+ *
+ * Sidebar module styles.
+ */
+
+.sidebar {
+  font-size: 0.95rem;
+  font-family: var(--font-family-sans);
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.sidebar .module {
+  padding: 1rem 0;
+  margin-bottom: 1.25rem;
+}
+
+.sidebar .module h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.7;
+}
+
+.sidebar ul li {
+  margin-bottom: 0.25rem;
+}
+
+/* Stats and "Elsewhere" use a leading icon instead of a bullet. */
+.icon-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.icon-list svg[aria-hidden="true"] {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.sidebar .module p {
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+}
+
+.sidebar .module p:last-child {
+  margin-bottom: 0;
+}
+
+.module-about .h-card {
+  margin: 1rem 0;
+}
+
+.module-note {
+  font-size: 0.85rem;
+  color: var(--color-darkGrey);
+  margin: 0.75rem 0 0;
+}

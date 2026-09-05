@@ -1,0 +1,50 @@
+{# partials/webmentions.njk
+ #
+ # Displays webmentions for a post. Fetched at build time via
+ # src/_data/webmentions.js.
+ #}
+{% set webmentions = webmentions[page.url] %}
+{% if webmentions and webmentions.length > 0 %}
+  <section class="webmentions">
+    <h2>Webmentions</h2>
+    <ul class="webmentions-list">
+      {% for mention in webmentions %}
+        <li class="webmention">
+          <div class="webmention-author">
+            {% if mention.author.photo %}
+              <img src="{{ mention.author.photo }}" alt="{{ mention.author.name }}" width="40" height="40" loading="lazy">
+            {% endif %}
+            <a class="p-name u-url" href="{{ mention.author.url }}">{{ mention.author.name }}</a>
+            <span class="webmention-type">
+              {% if mention['wm-property'] == 'like-of' %}
+                liked this
+              {% elif mention['wm-property'] == 'repost-of' %}
+                reposted this
+              {% elif mention['wm-property'] == 'bookmark-of' %}
+                bookmarked this
+              {% elif mention['wm-property'] == 'mention-of' %}
+                mentioned this
+              {% else %}
+                replied
+              {% endif %}
+            </span>
+            <time class="dt-published" datetime="{{ mention.published }}">
+              {{ mention.published | readableDate }}
+            </time>
+          </div>
+          {% if mention.content and mention.content.text %}
+            <div class="webmention-content">
+              <p class="p-content">{{ mention.content.text }}</p>
+              <a class="u-url" href="{{ mention.url }}">View original</a>
+            </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% else %}
+  <section class="webmentions">
+    <h2>Webmentions</h2>
+    <p class="webmentions-empty">No webmentions yet. <a href="https://indieweb.org/Webmention" target="_blank" rel="noopener">Learn about webmentions</a></p>
+  </section>
+{% endif %}

@@ -1,0 +1,39 @@
+---
+title: Home
+---
+
+<div class="h-feed">
+  <h2 class="p-name" style="display:none;">{{ site.title }}</h2>
+  <div class="p-author h-card" style="display:none;">
+    <a class="u-url p-name" href="{{ site.url }}">{{ site.author.name }}</a>
+  </div>
+  {% for post in collections.posts | head(site.homepagePostsLimit) %}
+    <article class="h-entry post-preview">
+      <h2 class="p-name post-title">
+        <a class="u-url" href="{{ post.url }}" data-pagefind-meta="title">{{ post.data.title }}</a>
+      </h2>
+      <p class="post-meta">
+        <time class="dt-published" datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+        <span class="separator">·</span>
+        <span class="post-type">Article by {{ site.author.name }}</span>
+        <span class="separator">·</span>
+        <span class="post-stats">{{ post.templateContent | readingTime }}</span>
+        <span class="separator">·</span>
+        <span class="post-stats">{{ post.templateContent | wordCount }} words</span>
+      </p>
+      {% if post.data.tags %}
+        <p class="post-tags-small">
+          {% for tag in post.data.tags | filterTagList %}
+            <a class="p-category tag tag-small" href="/tags/#{{ tag | slugify }}">#{{ tag }}</a>
+          {% endfor %}
+        </p>
+      {% endif %}
+      <p class="post-blurb e-content">
+        {{ post.data.description or (post.templateContent | excerpt(150)) }}
+      </p>
+    </article>
+  {%- endfor %}
+  <nav class="pagination">
+    <a href="/posts/">View all posts →</a>
+  </nav>
+</div>

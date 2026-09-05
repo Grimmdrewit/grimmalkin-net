@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}" class="no-js">
+<head>
+  {% include "partials/head.njk" %}
+</head>
+<body>
+  <script>document.documentElement.classList.remove('no-js');</script>
+  {% include "partials/header.njk" %}
+  <main>
+    {% if site.hero.enabled and page.url == "/" %}
+      {% include "partials/hero.njk" %}
+    {% endif %}
+    {% if site.sidebar %}
+      <div class="container">
+        <div class="site-layout">
+          <div class="content">
+            {{ content | safe }}
+          </div>
+          {% include "partials/aside.njk" %}
+        </div>
+      </div>
+    {% else %}
+      <div class="container">
+        {{ content | safe }}
+      </div>
+    {% endif %}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% getBundle "fontawesome" %}
+</body>
+</html>

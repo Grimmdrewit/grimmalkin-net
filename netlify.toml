@@ -1,0 +1,53 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# RSS feed redirects - handle common feed URL variations
+[[redirects]]
+  from = "/feed"
+  to = "/feed.xml"
+  status = 301
+
+[[redirects]]
+  from = "/rss"
+  to = "/feed.xml"
+  status = 301
+
+[[redirects]]
+  from = "/rss.xml"
+  to = "/feed.xml"
+  status = 301
+
+[[redirects]]
+  from = "/atom.xml"
+  to = "/feed.xml"
+  status = 301
+
+[[redirects]]
+  from = "/feed.xml/"
+  to = "/feed.xml"
+  status = 301
+
+# 404 catch-all (must be last)
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Specific headers for RSS feed
+[[headers]]
+  for = "/feed.xml"
+  [headers.values]
+    Content-Type = "application/atom+xml; charset=utf-8"
