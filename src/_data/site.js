@@ -17,7 +17,7 @@ export default {
     url: "https://grimmalkin.net",
     photo: "/assets/images/author.jpg",
     email: "gdi@grimmalkin.net",
-    bio: "Hey there. Name's Grimm. I am not a web developer. I'm a Queer Trans artist and writer with anxiety and ADHD who finally got tired of starting over on increasingly hostile social media platforms every couple of years. When I finally threw in the towel with Microsoft and Apple and became a 40 year old beginner on Linux, I figured I'd also sudo bash my head against the keyboard until I figured out how to make a website of my own while I was at it. I'd always wanted to. Why not now?",
+    bio: "Hey there. Name's Grimm. I am not a web developer. I'm a Queer Trans artist and writer with anxiety and ADHD who got tired of jumping social media platforms and starting from scratch every couple of years. When I became a 40 year old beginner on Linux last year, I figured I'd also make a website of my own while I was at it. I'd always wanted to. Why not?",
     // rel="me" links. Used to verify your identity across sites (e.g. for
     // IndieAuth) and rendered in <head> and the footer h-card.
     relMe: ["https://social.lol/@gdi", "https://github.com/grimmdrewit/"]
@@ -39,7 +39,7 @@ export default {
   // Source repo. Used by the hero's "Learn more" link, the colophon, and
   // the footer's "Source" link. Point this at your own fork once you have
   // one.
-  repoUrl: "https://source.tube/grimmdrewit/grimmalkin-net.git",
+  repoUrl: "https://github.com/grimmdrewit/grimmalkin-net.git",
 
   // The dismissible intro banner shown on the homepage (see
   // partials/hero.njk). Meant to explain the starter to a first-time
@@ -49,7 +49,7 @@ export default {
   hero: {
     enabled: true,
     title: "Welcome to the IndieWeb 11ty Starter: I did NOT write this code.",
-    body: "I did not write this code. I am using This minimal Eleventy starter made by Brennan Day, because I wanted to start off with code that was written with accessibility, security, and efficiency in mind. So I'm borrowing Brennan's, until I find my feet and feel confident enough to code something all by myself, from concept to deployment. I will get there someday soon enough. For now, I just wanted something up that I could play with and see how it all works. There are several ways to 1) write code, 2) make a website with that code, 3) host that website, and 4) deploy the dang thing to the thing. This is one of like, five methods that I've come across so far. (Maybe I'll blog about it once I've set up my internet house the way I want it. I promise I will not tell you 'it's easy, just open up your CLI (I beg your finest pardon, my WHAT) and simply' and then proceed to type like my cat decided to walk across my keyboard while the font was set to wingdings. If this sounds like your experience on the indieweb, Annie Mueller [wrote an essay that absolutely sent me,](https://anniemueller.com/posts/how-i-a-non-developer-read-the-tutorial-you-a-developer-wrote-for-me-a-beginner) and perhaps it will bring you joy as well.)",
+    body: "I did not write this code. I am using This minimal Eleventy starter made by Brennan Day, because I wanted to start off with code that was written with accessibility, security, and efficiency in mind.",
     features: "IndieWeb microformats (h-card/h-entry) · sending &amp; receiving webmentions · RSS + JSON feeds · build-time search via Pagefind · CSS-only dark mode · no client-side JavaScript.",
     ctaText: "Read the README",
     ctaUrl: "https://github.com/brennanbrown/11ty-Indie-Web-Blog-Starter#readme"
