@@ -27,29 +27,3 @@ export default async function () {
     return [];
   }
 }
-const EleventyFetch = require("@11ty/eleventy-fetch");
-
-module.exports = async function() {
-  const domain = "grimmalkin.net";
-  const token = process.env.WEBMENTION_IO_TOKEN;
-  
-  if (!token) {
-    console.warn("No WEBMENTION_IO_TOKEN found. Skipping webmention fetch.");
-    return { children: [] };
-  }
-  
-  const url = `https://webmention.io/api/mentions.jf2?domain=${domain}&token=${token}&per-page=1000`;
-  
-  try {
-    const response = await EleventyFetch(url, {
-      duration: "6h",
-      type: "json"
-    });
-    
-    console.log(`Fetched ${response.children.length} webmentions`);
-    return response;
-  } catch(e) {
-    console.error("Error fetching webmentions:", e);
-    return { children: [] };
-  }
-};
