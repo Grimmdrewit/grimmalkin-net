@@ -46,7 +46,7 @@ export default {
   // Source repo. Used by the hero's "Learn more" link, the colophon, and
   // the footer's "Source" link. Point this at your own fork once you have
   // one.
-  repoUrl: "https://source.tube/grimmdrewit/grimmalkin-net.git",
+  repoUrl: "https://github/grimmdrewit/grimmalkin-net.git",
 
   // The dismissible intro banner shown on the homepage (see
   // partials/hero.njk). Meant to explain the starter to a first-time
