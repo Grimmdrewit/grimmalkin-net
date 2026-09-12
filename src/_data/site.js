@@ -17,10 +17,17 @@ export default {
     url: "https://grimmalkin.net",
     photo: "/assets/images/author.jpg",
     email: "gdi@grimmalkin.net",
-    bio: "Hey there. Name's Grimm. I am not a web developer. I'm a Queer Trans artist and writer with anxiety and ADHD who got tired of jumping social media platforms and starting from scratch every couple of years. When I became a 40 year old beginner on Linux last year, I figured I'd also make a website of my own while I was at it. I'd always wanted to. Why not?",
+    bio: "Hey there. Name's Grimm. I am not a web developer. If you can read this, I pushed a button and something either went very wrong, or very right, and now I'm scared to touch it again.",
     // rel="me" links. Used to verify your identity across sites (e.g. for
     // IndieAuth) and rendered in <head> and the footer h-card.
-    relMe: ["https://social.lol/@gdi", "https://github.com/grimmdrewit/"]
+    relMe: [
+      "https://github.com/grimmdrewit", 
+      "https://gitlab.com/grimmdrewit",
+      "https://source.tube/grimmdrewit",
+      "https://social.lol/@grimmdrewit", 
+      "https://grimmdrewit.com",
+      "https://northsky.app/profile/grimmdrewit.com"
+    ] 
   },
 
   seo: {
@@ -39,7 +46,7 @@ export default {
   // Source repo. Used by the hero's "Learn more" link, the colophon, and
   // the footer's "Source" link. Point this at your own fork once you have
   // one.
-  repoUrl: "https://github.com/grimmdrewit/grimmalkin-net.git",
+  repoUrl: "https://source.tube/grimmdrewit/grimmalkin-net.git",
 
   // The dismissible intro banner shown on the homepage (see
   // partials/hero.njk). Meant to explain the starter to a first-time
@@ -122,9 +129,7 @@ export default {
   },
 
   credits: {
-    madeBy: "Brennan Kenneth Brown",
-    madeByUrl: "https://brennan.day",
-    project: "Berry House",
-    projectUrl: "https://berryhouse.ca"
+    madeBy: "Grimmalkin",
+    madeByUrl: "https://grimmalkin.net"
   }
 };
