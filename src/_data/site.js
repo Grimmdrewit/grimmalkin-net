@@ -5,7 +5,7 @@
 // etc. Change your site's identity by editing this file, not the templates.
 
 export default {
-  title: "grimmalkin.net",
+  title: "Grimmalkin.net",
   description: "A haunted house overrun with singing rodents.",
   url: "https://grimmalkin.net", // no trailing slash
   language: "en",
@@ -21,12 +21,10 @@ export default {
     // rel="me" links. Used to verify your identity across sites (e.g. for
     // IndieAuth) and rendered in <head> and the footer h-card.
     relMe: [
-      "https://github.com/grimmdrewit", 
-      "https://gitlab.com/grimmdrewit",
-      "https://source.tube/grimmdrewit",
-      "https://social.lol/@grimmdrewit", 
       "https://grimmdrewit.com",
-      "https://northsky.app/profile/grimmdrewit.com"
+      "https://northsky.app/profile/grimmdrewit.com",
+      "https://github.com/grimmdrewit", 
+      "https://social.lol/@grimmdrewit",
     ] 
   },
 
